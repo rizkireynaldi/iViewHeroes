@@ -1,4 +1,4 @@
-package com.alienequip.iviewheroes;
+package com.alienequip.iviewheroes.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,17 +9,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.alienequip.iviewheroes.model.Hero;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.alienequip.iviewheroes.R;
 
 import java.util.ArrayList;
 
 public class ListHeroAdapter extends RecyclerView.Adapter<ListHeroAdapter.ListViewHolder> {
     private ArrayList<Hero> listHero;
 
-    ListHeroAdapter(ArrayList<Hero> list) {
+    public ListHeroAdapter(ArrayList<Hero> list) {
         this.listHero = list;
     }
+
 
     @NonNull
     @Override

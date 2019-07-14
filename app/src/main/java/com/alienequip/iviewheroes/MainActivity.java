@@ -1,10 +1,14 @@
 package com.alienequip.iviewheroes;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
+import com.alienequip.iviewheroes.adapter.ListHeroAdapter;
+import com.alienequip.iviewheroes.model.Hero;
+import com.alienequip.iviewheroes.model.HeroesData;
 
 import java.util.ArrayList;
 
