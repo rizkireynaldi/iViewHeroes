@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.alienequip.iviewheroes.adapter.CardViewHeroAdapter;
 import com.alienequip.iviewheroes.adapter.GridHeroAdapter;
 import com.alienequip.iviewheroes.adapter.ListHeroAdapter;
 import com.alienequip.iviewheroes.model.Hero;
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.action_cardview:
-
+                showRecyclerCardView();
                 break;
         }
     }
@@ -70,5 +71,11 @@ public class MainActivity extends AppCompatActivity {
         rvHeroes.setLayoutManager(new GridLayoutManager(this, 2));
         GridHeroAdapter gridHeroAdapter = new GridHeroAdapter(list);
         rvHeroes.setAdapter(gridHeroAdapter);
+    }
+
+    private void showRecyclerCardView(){
+        rvHeroes.setLayoutManager(new LinearLayoutManager(this));
+        CardViewHeroAdapter cardViewHeroAdapter = new CardViewHeroAdapter(list);
+        rvHeroes.setAdapter(cardViewHeroAdapter);
     }
 }
